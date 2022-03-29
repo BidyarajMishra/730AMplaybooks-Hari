@@ -1,0 +1,11 @@
+--- # s/w installation
+- name: my test playbook
+  hosts: webservers
+  user: ansible
+  #become: true
+  connection: ssh
+  tasks:
+    - name: install package into hosts
+      yum:
+        name: git
+        state: present
